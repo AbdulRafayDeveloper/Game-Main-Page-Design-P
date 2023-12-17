@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://eclesiar.com/ext/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://eclesiar.com/ext/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://eclesiar.com/ext/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+  <!-- CSS -->
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* remove body bg color when you set  image in bg */
+    .container {
+      background: linear-gradient(90deg,
+          rgb(29, 22, 13) 35%,
+          rgb(59, 48, 37) 100%);
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.31);
+      border-radius: 19px;
+    }
+
+    .header {
+      box-shadow: 0 0 19px rgba(2, 2, 2, 0.87);
+      background: linear-gradient(90deg,
+          rgba(84, 62, 36, 1) 35%,
+          rgba(52, 42, 31, 1) 100%);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      margin: 0px -15px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .header img {
+      display: inline-block;
+      max-width: 50px;
+      margin-right: 10px;
+    }
+
+    .header h2 {
+      display: inline-block;
+      margin: 0;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .battle-pass {
+      margin-top: 20px;
+      color: #fff;
+      overflow-x: auto;
+      /* overflow-x: hidden; */
+    }
+
+    .level-THRE {
+      background-color: #4e453c;
+      color: #fff;
+      padding: 8px 26px;
+      margin-left: 6%;
+      margin-top: 5px;
+      width: fit-content;
+      font-size: x-large;
+      border-radius: 10px;
+      box-shadow: 0 0 23px rgba(89, 89, 184, 0.5);
+      border: 2px solid skyblue;
+    }
+
+    .battle-pass__sub-item__heading {
+      margin: 0;
+      font-weight: bolder;
+      font-size: 11px;
+    }
+
+    .battle-pass__sub-item_bar {
+      display: flex;
+      align-items: center;
+      width: 60%;
+      margin-top: 10px;
+    }
+
+    .progress-bar-container {
+      flex-grow: 10;
+      margin-left: 10px;
+      margin-top: 13px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .progress-bar-container .progress {
+      margin-bottom: 10px;
+      height: 9px;
+      border-radius: 12px;
+    }
+
+    .progress-bar-container h6,
+    .progress-bar-container p {
+      margin: 0;
+      font-size: small;
+    }
+
+    .battle-pass .battle-pass__sub-item--header {
+      display: flex;
+      padding-top: 2%;
+    }
+
+    .card.package-card {
+      padding: 1px;
+      overflow: hidden;
+    }
+
+    .card-body__items {
+      background: #11101088;
+      border-radius: 13px;
+      height: 130px;
+    }
+
+    .battle-pass .card_title {
+      border-radius: 10px;
+      background-color: #919c7f5d;
+      color: #fff;
+    }
+
+    .battle-pass .card {
+      border-radius: 10px;
+      padding: 7px;
+      background-color: #9e9e9c5d;
+      color: #fff;
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+      transform: scaleX(-1);
+    }
+
+    .card.vertical-text:hover {
+      background-color: 2px solid blue;
+    }
+
+    /* remove footer bg color when you set img  */
+    .footer {
+      box-shadow: 0 0 19px rgba(0, 0, 0, 0.87);
+      color: #fff;
+      margin-top: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      margin: 10px -15px 0px -15px;
+    }
+
+    button.card:hover {
+      background-color: rgb(214, 214, 120);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container"
+    style="background-image: url('1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="battle-pass">
+      <!-- header -->
+      <div class="header">
+        <img src="2.jpg" alt="logo" />
+        <h2>Premium Pass</h2>
+      </div>
+      <!-- progress Bar -->
+      <div class="battle-pass__sub-item">
+        <!-- <div class="battle-pass__sub-item_bar">
+          <div class="row">
+            <div class="col-md-2">
+            
+          
+          
+          <div>
+            <p class="battle-pass__sub-item__heading">CURRENT TIER</p>
+            <div class="level-THRE">2</div>
+          </div>
+          <div class="progress-bar-container">
+            <h4 style="font-weight: 700; font-size: 20px;">PROGRESS</h4>
+            <p>60 PRESTIGE POINTS</p>
+
+            <div class="progress">
+              <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <h6 class="level-info" style="font-size: x-small; padding-top: 8%; margin-left: 10px">
+            UNLOCK
+            <p class="battle-pass__sub-item__heading font-weight-bold">
+              TIER 3
+            </p>
+          </h6>
+
+           <div class="col-md-2">
+          <div class="pagination mt-3">
+            <span id="currentPage">Page 1/8</span>
+            <a href="#" id="prevPage">&lt;</a>
+            <a href="#" id="nextPage">&gt;</a>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div> -->
+
+        <!-- progress Bar -->
+        <div class="battle-pass__sub-item">
+          <div class="row">
+            <div class="col-md-1">
+              <div>
+                <p class="battle-pass__sub-item__heading">CURRENT TIER</p>
+                <div class="level-THRE">2</div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="progress-bar-container">
+                <h4 style="font-weight: 700; font-size: 20px;">PROGRESS</h4>
+                <p>60 PRESTIGE POINTS</p>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <h6 class="level-info" style="font-size: x-small; padding-top: 80%; margin-left: 0px">
+                UNLOCK
+                <p class="battle-pass__sub-item__heading font-weight-bold">
+                  TIER 3
+                </p>
+              </h6>
+            </div>
+
+
+            <!-- Pagination -->
+            <div class="col-md-2 d-flex justify-content-end" style="padding-top: 5%;">
+              <span id="currentPage" style="margin-right: 30px;">Page 1/8</span>
+              <a href="#" id="prevPage">&lt;</a>
+              <a href="#" id="nextPage">&gt;</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!--Free TIER LEVEl here add slider -->
+        <div class="battle-pass__sub-item--header">
+          <!-- <div class="package-card" style="margin-top: 35px; margin-right: 10px">
+            <button
+              class="card vertical-text text-light d-flex flex-column justify-content-center align-items-center height-185px-outline-none transition-background-color-0.3s font-weight-bold m-0 mr-2 border-2"
+              style="
+                  height: 185px;
+                  background-color: #4e453c;
+                  box-shadow: 0 0 25px rgba(86, 113, 204, 0.5);
+                  border: 3px solid lightseagreen;
+                ">
+              FREE
+            </button>
+          </div> -->
+          <div class="package-card" style="margin-top: 35px; margin-right: 10px">
+            <button
+              class="card vertical-text text-light d-flex flex-column justify-content-center align-items-center height-185px-outline-none transition-background-color-0.3s font-weight-bold m-0 mr-2 border-2"
+              style="
+                    height: 185px;
+                    background-color: #4e453c;
+                    box-shadow: 0 0 25px rgba(86, 113, 204, 0.5);
+                    border: 3px solid lightseagreen;
+                    transform: rotate(180deg); /* Rotate text by 180 degrees */
+                ">
+              FREE
+            </button>
+          </div>
+
+          <!-- Here set loop or pagination -->
+          <div class="package-card col-lg-2 mb-4">
+            <button class="card_title px-5" style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: bold;
+                  margin: 4px 0px;
+                  white-space: nowrap;
+                  padding: 4px 0px;
+                  border: none;
+                  width: 155px;
+                  background-color: #ccd3c25d;
+                ">
+              TIER 1
+            </button>
+
+            <div class="card" style="background-color: #ccd3c25d;">
+              <span class="card-body__items"></span>
+              <!--Here show to render in card   -->
+              <h2 style="padding-left: 32px; padding: 16px"></h2>
+            </div>
+          </div>
+          <div class="package-card col-lg-2 mb-4">
+            <button class="card_title px-5" style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: bold;
+                  margin: 4px 0px;
+                  white-space: nowrap;
+                  padding: 4px 0px;
+                  border: none;
+                  width: 155px;
+                  background-color: #ccd3c25d;
+                ">
+              TIER 2
+            </button>
+
+            <div class="card" style="background-color: #ccd3c25d;">
+              <span class="card-body__items"></span>
+              <!--Here show to render in card   -->
+              <h2 style="padding-left: 32px; padding: 16px"></h2>
+            </div>
+          </div>
+          <div class="package-card col-lg-2 mb-4">
+            <button class="card_title " style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: bold;
+                  margin: 4px 1px;
+                  white-space: nowrap;
+                  padding: 4px 6px;
+                  width: 100%;
+                  border: none;
+                ">
+              TIER 3
+              <span class="px-2 ">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+              </span>
+            </button>
+
+            <div class="card">
+              <span class="card-body__items"></span>
+              <!--Here show to render in card   -->
+              <h2 style="padding-left: 32px; padding: 16px"></h2>
+            </div>
+          </div>
+          <div class="package-card col-lg-2 mb-4">
+            <button class="card_title " style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                margin: 4px 0px;
+                white-space: nowrap;
+                padding: 4px 6px;
+                width: 100%;
+                border: none;
+              ">
+              TIER 4
+              <span class="px-2 ">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+              </span>
+            </button>
+
+            <div class="card">
+              <span class="card-body__items"></span>
+              <!--Here show to render in card   -->
+              <h2 style="padding-left: 32px; padding: 16px"></h2>
+            </div>
+          </div>
+          <div class="package-card col-lg-2 mb-4">
+            <button class="card_title " style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: bold;
+                  margin: 4px 0px;
+                  white-space: nowrap;
+                  padding: 4px 6px;
+                  width: 100%;
+                  border: none;
+                  width: 155px;
+                ">
+              TIER 5
+              <span class="px-2 ">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+              </span>
+            </button>
+
+            <div class="card">
+              <span class="card-body__items"></span>
+              <!--Here show to render in card   -->
+              <h2 style="padding-left: 32px; padding: 16px"></h2>
+            </div>
+          </div>
+
+          <div class="package-card col-lg-2 mb-4">
+            <button class="card_title " style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: bold;
+                  margin: 4px 0px;
+                  white-space: nowrap;
+                  padding: 4px 6px;
+                  width: 100%;
+                  border: none;
+                  width: 155px;
+                ">
+              TIER 6
+              <span class="px-2 ">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+              </span>
+            </button>
+
+            <div class="card">
+              <span class="card-body__items"></span>
+              <!--Here show to render in card   -->
+              <h2 style="padding-left: 32px; padding: 16px"></h2>
+            </div>
+          </div>
+          <!-- Here set loop or pagination -->
+        </div>
+      </div>
+      <!--PREMIUM TIER LEVEl here add slider -->
+      <div class="battle-pass__sub-item--header">
+        <div class="package-card">
+          <button
+            class="card vertical-text text-light d-flex flex-column justify-content-center align-items-center height-185px-outline-none transition-background-color-0.3s font-weight-bold m-0 mr-2 border-2 border-warning"
+            style="
+                background-color: #4e453c;
+                box-shadow: 0 0 25px rgba(153, 117, 39, 0.5);
+                height: 185px;
+                transform: rotate(180deg); /* Rotate text by 180 degrees */
+              ">
+            PREMIUM
+          </button>
+        </div>
+        <div class="package-card col-lg-2 mb-4 " style="margin-left: 10px">
+          <div class="card">
+            <span class="card-body__items"></span><!--Here show to render in card   -->
+            <h2 style="padding-left: 32px; padding: 16px"></h2>
+          </div>
+        </div>
+        <div class="package-card col-lg-2 mb-4">
+          <div class="card">
+            <span class="card-body__items"></span>
+            <h2 style="padding-left: 32px; padding: 16px"></h2>
+          </div>
+        </div>
+        <div class="package-card col-lg-2 mb-4">
+          <div class="card">
+            <span class="card-body__items"></span>
+
+            <h2 style="padding-left: 32px; padding: 16px"></h2>
+          </div>
+        </div>
+        <div class="package-card col-lg-2 mb-4">
+          <div class="card">
+            <span class="card-body__items"></span><!--Here show to render in card   -->
+            <h2 style="padding-left: 32px; padding: 16px"></h2>
+          </div>
+        </div>
+        <div class="package-card col-lg-2 mb-4">
+          <div class="card">
+            <span class="card-body__items"></span><!--Here show to render in card   -->
+            <h2 style="padding-left: 32px; padding: 16px"></h2>
+          </div>
+        </div>
+        <div class="package-card col-lg-2 mb-4">
+          <div class="card">
+            <span class="card-body__items"></span>
+
+            <h2 style="padding-left: 32px; padding: 16px"></h2>
+          </div>
+        </div>
+        <div class="package-card col-lg-2 mb-4"></div>
+      </div>
+    </div>
+    <!-- footer -->
+
+    <div class="footer p-3 justify-content-between" style="background-color: rgba(255, 138, 4, 0.164);">
+      <button class="py-3 px-4 fa-border-none border-0 bg-warning" style="
+            box-shadow: 0 0 20px rgb(246, 255, 0); /* Golden shadow */
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bolder;
+            border-radius: 18px;
+            text-align: left; /* Align text to the left */
+          ">
+        BUY PREMIUM PASS<br>
+        <p style="margin-left: 15px;margin-bottom: -5px;font-weight: 400;">6 Euros</p>
+      </button>
+
+      <!-- <button class="py-3 px-4 fa-border-none border-0 bg-warning" style="
+        box-shadow: 0 0 20px rgb(246, 255, 0); /* Golden shadow */
+        transition: background-color 0.3s, transform 0.3s;
+        font-weight: bolder;
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        display: flex;
+        align-items: center; /* Center items vertically in the flex container */
+        flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+      " onmouseover="this.style.backgroundColor='#ffd700'; this.style.transform='scale(1.05)';"
+        onmouseout="this.style.backgroundColor='#FFD738'; this.style.transform='scale(1)';">
+        <p style="margin-right: 8px;"><i class="fas fa-icon-name"></i></p>
+        <div style="font-weight: 600; display: block;">BUY PREMIUM PASS</div>
+        <div style="font-weight: 600; display: block;">6 Euros</div>
+      </button> -->
+
+      <div class="p-3 d-flex flex-column pr-5" style="
+      background-color: rgba(245, 223, 209, 0.39);
+            border-radius: 16px;
+            text-align: left;
+            font-size: small;
+            font-weight: bold;
+            width: 30%;
+          ">
+        <h5 style="font-weight: 700;">Priesting point info:</h5>
+        <p style="margin-bottom: 2px">each x pixel = 100 Priesting</p>
+        <p style="margin-bottom: 2px">one week = 512 Priesting</p>
+        <p style="margin-bottom: 2px">one month = 2240 Priesting</p>
+      </div>
+    </div>
+    <!-- footer -->
+  </div>
+  <script src="https://eclesiar.com/ext/jquery/jquery-3.7.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://eclesiar.com/ext/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://eclesiar.com/ext/sweetalert2/sweetalert2.min.js"></script>
+</body>
+
+</html>
